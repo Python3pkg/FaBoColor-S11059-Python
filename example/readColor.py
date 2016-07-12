@@ -12,15 +12,19 @@
 
 import FaBoColor_S11059
 import time
+import sys
 
 s11059 = FaBoColor_S11059.S11059()
 
-while True:
+try:
+    while True:
 
-    color = s11059.read()
-    print "r =", (color['r']),
-    print " g =", (color['g']),
-    print " B =", (color['b']),
-    print " ir =", (color['ir'])
-    print
-    time.sleep(1)
+        color = s11059.read()
+        print "r =", (color['r']),
+        print " g =", (color['g']),
+        print " B =", (color['b']),
+        print " ir =", (color['ir'])
+        print
+        time.sleep(1)
+except KeyboardInterrupt:
+    sys.exit()

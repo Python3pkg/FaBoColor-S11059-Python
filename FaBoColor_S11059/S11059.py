@@ -50,12 +50,14 @@ MODE_FIXED  = 0
 ## SMBus
 bus = smbus.SMBus(1)
 
-##  FaBo Color I2C Controll class
+## FaBo Color I2C Controll class
 class S11059:
+
     ## Constructor
-    #  @param [in] self The object pointer.
-    def __init__(self):
-        self.address = SLAVE_ADDRESS
+    #  @param [in] address S11059 I2C slave address default:0x2a
+    def __init__(self, address=SLAVE_ADDRESS):
+
+        self.address = address
         self.restart() # wake from sleep
         self.setGain(GAIN_HIGH)
         self.setMode(MODE_FIXED)
