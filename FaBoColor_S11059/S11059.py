@@ -1,6 +1,6 @@
 # coding: utf-8
-## @package FaBoColor_S11059
-#  This is a library for the FaBo Color I2C Brick.
+## @package S11059
+#  This is a FaBoColor_S11059 library for the FaBo Color I2C Brick.
 #
 #  http://fabo.io/203.html
 #
