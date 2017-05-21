@@ -20,11 +20,11 @@ try:
     while True:
 
         color = s11059.read()
-        print "r =", (color['r']),
-        print " g =", (color['g']),
-        print " B =", (color['b']),
-        print " ir =", (color['ir'])
-        print
+        print("r =", (color['r']), end=' ')
+        print(" g =", (color['g']), end=' ')
+        print(" B =", (color['b']), end=' ')
+        print(" ir =", (color['ir']))
+        print()
         time.sleep(1)
 except KeyboardInterrupt:
     sys.exit()

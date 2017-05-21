@@ -145,11 +145,11 @@ class S11059:
 
     ## Wait device sleep
     def waitAdc(self):
-        print "waitAdc start"
+        print("waitAdc start")
         while self.checkSleep()== False:
             time.sleep(1/1000000) # 1 microsecond
         time.sleep(0.001)
-        print "waitAdc end"
+        print("waitAdc end")
 
     ## Read Measurement data
     #  @retval r red value
@@ -158,11 +158,11 @@ class S11059:
     #  @retval i IR value
     def read(self):
         if self.mode == MODE_MANUAL:
-            print "self.restart() start"
+            print("self.restart() start")
             self.restart() # wake from sleep
-            print "waitADC start"
+            print("waitADC start")
             self.waitAdc() # wait measure
-            print "waitACD end"
+            print("waitACD end")
         else:
             if self.itime == CTRL_TIME_875U:         # delay 88usec
                 time.sleep(88*4/1000000)  # micro second
@@ -190,9 +190,9 @@ if __name__ == "__main__":
 
     while True:
         rgb = color.read()
-        print "r =", (rgb['r']),
-        print " g =", (rgb['g']),
-        print " B =", (rgb['b']),
-        print " ir =", (rgb['ir'])
-        print
+        print("r =", (rgb['r']), end=' ')
+        print(" g =", (rgb['g']), end=' ')
+        print(" B =", (rgb['b']), end=' ')
+        print(" ir =", (rgb['ir']))
+        print()
         time.sleep(1)
